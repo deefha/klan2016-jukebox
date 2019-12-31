@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="no-js" lang="cs">
+<head>
+	<meta charset="utf-8">
+	<title>KLAN 2016 - jukebox</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="manifest" href="site.webmanifest">
+<!-- 	<link rel="apple-touch-icon" href="icon.png"> -->
+	<link rel="shortcut icon" href="https://jukebox.klan2016.cz/favicon.ico" type="image/vnd.microsoft.icon">
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Play:400,700&amp;subset=latin,latin-ext">
+	<link rel="stylesheet" href="css/vendor/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/vendor/vegas/vegas.min.css">
+	<link rel="stylesheet" href="css/vendor/webxmp/common.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<meta name="theme-color" content="#d50000">
+</head>
+<body>
+
+<div id="shell">
+	<h1>KLAN 2016 - jukebox</h1>
+	<div class="clearfix">
+		<div id="top"><div class="clearfix">
+			<div id="controls">
+				<div id="buttons">
+					<button id="button-playpause"><i class="fa fa-play fa-lg"></i></button>
+					<button id="button-stop"><i class="fa fa-stop fa-lg"></i></button>
+					<button id="button-previous"><i class="fa fa-step-backward fa-lg"></i></button>
+					<button id="button-next"><i class="fa fa-step-forward fa-lg"></i></button>
+				</div>
+				<div id="ranges">
+					<div id="range-seek-shell" class="range clearfix">
+						<i class="fa fa-clock-o"></i> <input type="range" min="0" max="255" id="range-seek" name="range-seek">
+					</div>
+					<div id="range-gain-shell" class="range clearfix">
+						<i class="fa fa-volume-up"></i> <input type="range" min="0" max="255" id="range-gain" name="range-gain">
+					</div>
+				</div>
+			</div>
+			<div id="spectrum">
+				<canvas id="canvas-spectrum"></canvas>
+			</div>
+		</div></div>
+		<div id="bottom"><div class="clearfix">
+			<div id="playlist">
+				<ul>
+					<li><a href="#" data-index="1">01 Credits</a></li>
+					<li><a href="#" data-index="2">02 Bells of Infinity</a></li>
+					<li><a href="#" data-index="3">03 Ritual: Eye of Athrak</a></li>
+					<li><a href="#" data-index="4">04 Ritual: Lost City</a></li>
+					<li><a href="#" data-index="5">05 TrustNo1</a></li>
+					<li><a href="#" data-index="6">06 Delicious Taste</a></li>
+					<li><a href="#" data-index="7">07 Cryogenic</a></li>
+					<li><a href="#" data-index="8">08 Mountains of Madness</a></li>
+					<li><a href="#" data-index="9">09 Quiet Earth</a></li>
+					<li><a href="#" data-index="10">10 The Schwarzschield's Limit</a></li>
+					<li><a href="#" data-index="11">11 Dreamers in Me</a></li>
+					<li><a href="#" data-index="12">12 Evolution</a></li>
+					<li><a href="#" data-index="13">13 Homeworld</a></li>
+					<li><a href="#" data-index="14">14 Dawn</a></li>
+					<li><a href="#" data-index="15">15 Back to 80'</a></li>
+					<li><a href="#" data-index="16">16 Distant Visions</a></li>
+					<li><a href="#" data-index="17">17 Roots</a></li>
+					<li><a href="#" data-index="18">18 Happy Puppy</a></li>
+					<li><a href="#" data-index="19">19 Real Experience II</a></li>
+					<li><a href="#" data-index="20">20 Interstellar Dream</a></li>
+					<li><a href="#" data-index="21">21 Harmony</a></li>
+					<li><a href="#" data-index="22">22 Welcome</a></li>
+					<li><a href="#" data-index="23">23 Elements</a></li>
+					<li><a href="#" data-index="24">24 Date with Laura</a></li>
+					<li><a href="#" data-index="25">25 The One</a></li>
+					<li><a href="#" data-index="26">26 Floating Lights</a></li>
+					<li><a href="#" data-index="27">27 Drowning in a Milky Way</a></li>
+					<li><a href="#" data-index="28">28 Mondealiariss Theme</a></li>
+					<li><a href="#" data-index="29">29 Slow Motion</a></li>
+					<li><a href="#" data-index="30">30 Praeceps Transitio Spatium</a></li>
+					<li><a href="#" data-index="31">31 Rise of the Equinoxe</a></li>
+					<li><a href="#" data-index="32">32 Mighty Ones Return</a></li>
+					<li><a href="#" data-index="33">33 Emanation</a></li>
+					<li><a href="#" data-index="34">34 Nexus 6</a></li>
+					<li><a href="#" data-index="35">35 Lullaby</a></li>
+					<li><a href="#" data-index="36">36 Apocalypse</a></li>
+					<li><a href="#" data-index="37">37 Holon</a></li>
+					<li><a href="#" data-index="38">38 The Chase</a></li>
+					<li><a href="#" data-index="39">39 Wasteland</a></li>
+					<li><a href="#" data-index="40">40 Guitars</a></li>
+					<li><a href="#" data-index="41">41 Junkyard</a></li>
+					<li><a href="#" data-index="42">42 Insideus</a></li>
+					<li><a href="#" data-index="43">43 Rainfall</a></li>
+					<li><a href="#" data-index="44">44 Holding On</a></li>
+					<li><a href="#" data-index="45">45 Summer</a></li>
+					<li><a href="#" data-index="46">46 Forty-Two</a></li>
+					<li><a href="#" data-index="47">47 YP8DD (Bonus)</a></li>
+				</ul>
+			</div>
+			<div id="covers">
+				<div id="covers-1" class="cover"></div>
+				<div id="covers-2" class="cover"></div>
+			</div>
+		</div></div>
+	</div>
+	<hr />
+	<p class="downloads">
+		<a href="https://static.freedomconnection.cz/klan2011/jukebox.rar">KLAN Jukebox ve formátu MP3</a> (RAR, cca 170&nbsp;MB)<br />
+		<a href="https://static.freedomconnection.cz/klan2011/jukebox-original.rar">KLAN Jukebox ve formátu MOD a XM</a> (RAR, cca 18&nbsp;MB)
+	</p>
+	<hr />
+	<p class="footer">veškerá data &copy; 1996–2000 <a href="http://www.void.cz">VOID CZ, s.r.o.</a>, provoz a technická realizace <a href="http://freedomconnection.cz">freedom!connection</a> @ 2016-2020</p>
+</div>
+
+<script src="js/vendor/modernizr-3.7.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+<script src="js/vendor/vegas/vegas.min.js"></script>
+<script src="js/vendor/webxmp/scriptprocessor_player.min.js"></script>
+<script src="js/vendor/webxmp/backend_xmp.js"></script>
+<script src="js/vendor/webxmp/mini_controls.js"></script>
+<script src="js/vendor/webxmp/mini_display.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
